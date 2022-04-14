@@ -1,0 +1,22 @@
+main: MapMinigames.Main
+name: MapMinigames
+version: 1.0
+description: Multiple Map Minigames
+api-version: 1.18
+load: POSTWORLD
+author: Eliax00789
+commands:
+  mmtest:
+    descriptiom: MapMinigame Test
+    usage: |
+            /<command> help
+            /<command> play <mapid>
+            /<command> stop
+            /<command> highscores
+  mmtetris:
+    description: MapMinigame Tetris
+    usage: |
+            /<command> help
+            /<command> play <mapid>
+            /<command> stop
+            /<command> highscores
