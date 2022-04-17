@@ -15,10 +15,12 @@ import com.google.gson.GsonBuilder;
 
 public class Config {
 
+	public HashMap<String,Integer> snakescores;
 	public ArrayList<String> testscores;
 	public HashMap<String,Integer> tetrisscores;
 
 	public Config() {
+		this.snakescores = new HashMap<String,Integer>();
 	    this.testscores = new ArrayList<String>();
 	    this.tetrisscores = new HashMap<String,Integer>();
 	}

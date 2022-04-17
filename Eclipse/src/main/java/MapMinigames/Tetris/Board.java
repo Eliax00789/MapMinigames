@@ -15,7 +15,7 @@ import MapMinigames.Tetris.Shape.Tetrominoe;
 
 import static MapMinigames.Main.*;
 
-public class Board{
+public class Board {
 	
 	private Player player;
 

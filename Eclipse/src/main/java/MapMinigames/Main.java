@@ -15,6 +15,8 @@ public class Main extends JavaPlugin{
 	
 	public static File configfile;
 	
+	public static MapMinigames.Snake.Commands snakecommands = new MapMinigames.Snake.Commands();
+	public static MapMinigames.Snake.Listeners snakelisteners = new MapMinigames.Snake.Listeners();
 	public static MapMinigames.Test.Commands testcommands = new MapMinigames.Test.Commands();
 	public static MapMinigames.Tetris.Commands tetriscommands = new MapMinigames.Tetris.Commands();
 	public static MapMinigames.Tetris.Listeners tetrislisteners = new MapMinigames.Tetris.Listeners();
@@ -32,12 +34,14 @@ public class Main extends JavaPlugin{
 	}
 	
 	private void initCommands() {
+		getCommand("mmsnake").setExecutor(snakecommands);
 		getCommand("mmtest").setExecutor(testcommands);
 		getCommand("mmtetris").setExecutor(tetriscommands);
 	}
 	
 	private void initListeners() {
-		Bukkit.getServer().getPluginManager().registerEvents(tetrislisteners, this);
+		getServer().getPluginManager().registerEvents(snakelisteners, this);
+		getServer().getPluginManager().registerEvents(tetrislisteners, this);
 	}
 	
 	private void initConfig(){
@@ -49,9 +53,9 @@ public class Main extends JavaPlugin{
 		try {
 			configfile.createNewFile();
 		} catch (IOException ioException) {
-			Bukkit.getLogger().log(Level.INFO, PREFIX + " " + ioException);
+			getLogger().log(Level.INFO, PREFIX + " " + ioException);
 		}
 		Config.load(configfile);
-		Bukkit.getLogger().log(Level.INFO, PREFIX + "Config loaded");
+		getLogger().log(Level.INFO, PREFIX + "Config loaded");
 	}
 }

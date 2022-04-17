@@ -6,6 +6,13 @@ api-version: 1.18
 load: POSTWORLD
 author: Eliax00789
 commands:
+  mmsnake:
+    descriptiom: MapMinigame Snake
+    usage: |
+            /<command> help
+            /<command> play <mapid>
+            /<command> stop
+            /<command> highscores
   mmtest:
     descriptiom: MapMinigame Test
     usage: |
